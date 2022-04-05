@@ -1,0 +1,33 @@
+<div class="all-alb">
+  <div class="one-artist-cont">
+    <div  class="artist-img-cont">
+      <img *ngIf="oneArtist.images" class="artist-img" [src]="oneArtist.images[0].url" alt="oneArtist.name" />
+    </div>
+    <div class="artist-info-cont">
+      <h3>{{ oneArtist.name }}</h3>
+      <p *ngIf=" oneArtist.followers" class="follow">Followers: {{ oneArtist.followers.total | number }}</p>
+      <ul class="genres-cont">
+        <span> Genres:</span>
+        <li class="genre" *ngFor="let genre of oneArtist.genres">
+          {{ genre }}
+        </li>
+      </ul>
+
+      <button class="link" (click)="goBack()">Back</button>
+    </div>
+  </div>
+
+  <div class="alb-cont">
+    <div *ngFor="let album of allAblumsArr" class="all-albums">
+      <!-- <div *ngIf="album.album_type == 'album'"> -->
+        <div class="album-image">
+          <img class="img" [src]="album.images[0].url" [alt]="album.name" />
+        </div>
+        <div class="info">
+          <p>{{ album.name }}</p>
+          <a class="link" routerLink="../../album/{{ album.id }}">VIEW ALBUM</a>
+        </div>
+      </div>
+    <!-- </div> -->
+  </div>
+</div>

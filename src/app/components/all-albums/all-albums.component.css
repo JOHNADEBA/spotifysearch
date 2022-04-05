@@ -1,0 +1,63 @@
+.all-alb {
+  margin-bottom: 25rem;
+}
+.one-artist-cont {
+  color: white;
+  background: purple;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.3rem;
+  padding-bottom: 1rem;
+}
+
+.artist-img-cont {
+  min-width: 15rem;
+}
+.artist-img {
+  width: 12rem;
+  height: 13rem;
+  margin: 1rem;
+  border-radius: 50%;
+  border: 0.3rem white solid;
+}
+.artist-info-cont {
+  margin-left: 4rem;
+}
+
+span {
+  margin-right: 0.3rem;
+}
+.alb-cont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.all-albums {
+  width: 15rem;
+  color: white;
+  background: purple;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  text-align: center;
+}
+.album-image {
+  width: 80%;
+  margin: auto;
+}
+.img {
+  width: 100%;
+  border: 0.3rem white solid;
+  margin-top: 1.3rem;
+  margin-left: -0.3rem;
+  /* margin: 0.8rem auto; */
+  border-radius: 0.2rem;
+}
+.info {
+  padding-bottom: 2rem;
+}
+.info p {
+  /* margin: 0.4rem 0; */
+  font-weight: bold;
+  font-size: 1.2rem;
+}

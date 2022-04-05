@@ -1,0 +1,34 @@
+<div class="all-arts">
+  <form>
+    <input
+      type="text"
+      placeholder="Search Artist..."
+      [(ngModel)]="name"
+      #names="ngModel"
+      name="artistname"
+      (keyup)="searchArtist()"
+    />
+  </form>
+
+  <div class="all-artist-cont">
+    <div *ngFor="let artist of allArtistArr" class="all-artist">
+      <div class="img-cont">
+        <img
+          *ngIf="artist.images[0]"
+          [src]="artist.images[0].url"
+          alt="artist.name"
+        />
+      </div>
+      <div class="info-cont">
+        <h3>
+          <a routerLink="artist/{{ artist.id }}">{{ artist.name }}</a>
+        </h3>
+        <p class="follow">Followers: {{ artist.followers.total | number }}</p>
+        <ul class="genres-cont">
+          <span> Genres:</span>
+          <li class="genre" *ngFor="let genre of artist.genres">{{ genre }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

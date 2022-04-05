@@ -1,0 +1,54 @@
+<form
+  class="form-card"
+  (ngSubmit)="onSubmit(loginForm.value); loginForm.resetForm()"
+  #loginForm="ngForm"
+>
+  <h2>Login</h2>
+  <div class="form-div">
+    <label for="email">Email:</label>
+    <input
+      type="email"
+      id="email"
+      required
+      placeholder="Enter Email..."
+      ngModel
+      name="email"
+      #email="ngModel"
+      email
+    />
+    <span
+      *ngIf="(email.invalid || email.pristine) && email.touched"
+      class="error"
+    >
+      Email is required
+    </span>
+  </div>
+
+  <div class="form-div">
+    <label for="password">Password:</label>
+    <input
+      type="text"
+      id="password"
+      required
+      placeholder="Enter Password..."
+      ngModel
+      name="password"
+      #password="ngModel"
+    />
+    <span
+      *ngIf="(password.invalid || password.pristine) && password.touched"
+      class="error"
+    >
+      Password is required
+    </span>
+  </div>
+
+  <button
+    class="btn-not-active"
+    [ngClass]="{ btn: loginForm.form.valid }"
+    type="submit"
+    [disabled]="!loginForm.form.valid"
+  >
+    Login
+  </button>
+</form>

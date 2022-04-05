@@ -1,0 +1,67 @@
+nav {
+  background: black;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 0;
+  position: relative;
+}
+.logo {
+  width: 10rem;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.profile {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.profile img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+li,
+.profile span {
+  padding: 0 1.3rem;
+  text-align: center;
+}
+
+.profile span {
+  padding: 0 1.6rem;
+}
+
+.fa {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+a:hover,
+.profile:hover,
+.sub p a:hover {
+  color: #1ed760;
+}
+.sub {
+  border-radius: 0.5rem;
+  padding: 0.1rem 0.7rem;
+  background: white;
+  width: 12rem;
+  font-size: 1.2rem;
+  position: absolute;
+  right: 7rem;
+  top: 5rem;
+}
+.sub p a {
+  color: black;
+  font-weight: 700;
+}

@@ -1,0 +1,38 @@
+<div class="one-album">
+  <div class="one-artist-cont">
+    <div class="artist-img-cont">
+      <img
+        *ngIf="album.images"
+        class="artist-img"
+        [src]="album.images[0].url"
+        alt="album.name"
+      />
+    </div>
+    <div class="artist-info-cont">
+      <h3>{{ album.name }}</h3>
+      <p class="">Label: {{ album.label }}</p>
+
+      <p class="">Release Date: {{ album.release_date | date }}</p>
+      <div *ngIf="album.genres?.length > 0">
+        <ul class="genres-cont">
+          <span> Genres:</span>
+          <li class="genre" *ngFor="let genre of album.genres">
+            {{ genre }}
+          </li>
+        </ul>
+      </div>
+      <button class="link" (click)="goBack()">Back</button>
+    </div>
+  </div>
+
+  <div *ngIf="album.tracks" class="alb-cont">
+    <div *ngFor="let track of album.tracks.items" class="all-albums">
+      <div>
+        <audio class="player" controls [src]="track.preview_url"></audio>
+        <div class="info">
+          <p>{{ track.name }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+.form-card{
+    margin: 3rem auto;
+    color: white;
+    width: 30rem;
+    border: 0.2rem solid white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+h2{
+   text-align: center;
+}
+.form-div{
+    margin: 1rem;
+    width: 30rem;
+}
+ input{
+    margin: 1rem;
+    margin-left: -1px;
+    width: 90%;
+    padding: .7rem;
+    border-radius: 0.5rem;
+}
+input:focus{
+   outline: none;
+    
+}
+.btn-not-active{
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    margin-left: 1rem;
+    
+}
+.btn{
+    margin-left: 1rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    background: rgba(19, 1, 1, 0.3);
+    border: 0.2rem solid white;
+    color: white;
+    
+}
+.btn:hover{
+   color: rgb(207, 200, 200);
+   cursor: pointer;
+    
+}
+.error{
+    margin-top: -5rem;
+   color: red;
+    
+}

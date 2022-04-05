@@ -1,0 +1,47 @@
+.footer {
+  color: white;
+  background: black;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem 0;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+p {
+  padding: 0.5rem 0;
+}
+.logo {
+  width: 11rem;
+}
+.title {
+  color: silver;
+}
+.body {
+  cursor: pointer;
+}
+.body:hover,
+a:hover {
+  color: #1ed760;
+}
+.social-cont {
+  display: flex;
+  justify-content: space-between;
+}
+.social {
+  margin: 1rem;
+position: relative;
+  border-radius: 50%;
+  background: #222326;
+  width: 4rem;
+  height: 4rem;
+  font-size: 1.9rem;
+}
+.social a {
+position: absolute;
+top: 1rem;
+left: 1.2rem;
+}
